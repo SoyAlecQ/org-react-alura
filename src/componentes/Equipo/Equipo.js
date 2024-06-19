@@ -4,7 +4,7 @@ import "./Equipo.css"
 const Equipo = (props) => {
 
   const { colorPrimario, colorSecundario, titulo } = props.datos
-  const { colaboradores, eliminarColaborador } = props
+  const { colaboradores, eliminarColaborador, actualizarColorEquipo } = props
 
   const background = {
     backgroundColor: colorSecundario
@@ -18,6 +18,7 @@ const Equipo = (props) => {
     {
       colaboradores.length > 0 &&
       <section className="equipo" style={background}>
+        <input type="color" className="input-color" value={colorSecundario} onChange={(evento) => actualizarColorEquipo(evento.target.value, titulo)} />
         <h3 style={border}>{titulo}</h3>
         <div className="colaboradores">
           {

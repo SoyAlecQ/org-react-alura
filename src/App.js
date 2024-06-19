@@ -74,6 +74,10 @@ function App() {
     console.log("Eliminar colaborador")
   }
 
+  const actualizarColorEquipo = (color, titulo) => {
+    console.log("Actualizar: ", color, titulo)
+  }
+
   return (
     <div>
       <Header />
@@ -83,7 +87,7 @@ function App() {
       <MiOrg cambiarMostrar={cambiarMostrar} />
 
       {
-        equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)} eliminarColaborador={eliminarColaborador} />)
+        equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)} eliminarColaborador={eliminarColaborador} actualizarColorEquipo={actualizarColorEquipo} />)
       }
 
       <Footer />
