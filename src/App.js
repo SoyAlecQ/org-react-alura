@@ -8,12 +8,19 @@ import Footer from './componentes/Footer/Footer';
 
 function App() {
 
-  const [mostrarFormulario, actualizarMostrar] = useState(true)
+  const [mostrarFormulario, actualizarMostrar] = useState(false)
+  
   const [colaboradores, actualizarColaboradores] = useState([{
     nombre: "Byron Montenegro",
     puesto: "Estudiante en Alura Latam",
     foto: "https://github.com/soyalecq.png",
     equipo: "Programación"
+  },
+  {
+    nombre: "Byron Montenegro",
+    puesto: "Estudiante en Alura Latam",
+    foto: "https://github.com/soyalecq.png",
+    equipo: "Front End"
   }])
 
   const cambiarMostrar = () => {
@@ -63,6 +70,10 @@ function App() {
     actualizarColaboradores([...colaboradores, colaborador])
   }
 
+  const eliminarColaborador = () => {
+    console.log("Eliminar colaborador")
+  }
+
   return (
     <div>
       <Header />
@@ -72,7 +83,7 @@ function App() {
       <MiOrg cambiarMostrar={cambiarMostrar} />
 
       {
-        equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)} />)
+        equipos.map((equipo) => <Equipo datos={equipo} key={equipo.titulo} colaboradores={colaboradores.filter(colaborador => colaborador.equipo === equipo.titulo)} eliminarColaborador={eliminarColaborador} />)
       }
 
       <Footer />

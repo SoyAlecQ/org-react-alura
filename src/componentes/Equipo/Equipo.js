@@ -4,7 +4,7 @@ import "./Equipo.css"
 const Equipo = (props) => {
 
   const { colorPrimario, colorSecundario, titulo } = props.datos
-  const { colaboradores } = props
+  const { colaboradores, eliminarColaborador } = props
 
   const background = {
     backgroundColor: colorSecundario
@@ -21,7 +21,7 @@ const Equipo = (props) => {
         <h3 style={border}>{titulo}</h3>
         <div className="colaboradores">
           {
-            colaboradores.map((colaborador, index) => <Colaborador datos={colaborador} key={index} colorPrimario={colorPrimario} />)
+            colaboradores.map((colaborador, index) => <Colaborador datos={colaborador} key={index} colorPrimario={colorPrimario} eliminarColaborador={eliminarColaborador} />)
           }
         </div>
       </section>
