@@ -9,7 +9,7 @@ import Footer from './componentes/Footer/Footer';
 function App() {
 
   const [mostrarFormulario, actualizarMostrar] = useState(false)
-  
+
   const [colaboradores, actualizarColaboradores] = useState([{
     nombre: "Byron Montenegro",
     puesto: "Estudiante en Alura Latam",
@@ -23,11 +23,7 @@ function App() {
     equipo: "Front End"
   }])
 
-  const cambiarMostrar = () => {
-    actualizarMostrar(!mostrarFormulario)
-  }
-
-  const equipos = [
+  const [equipos, actualizarEquipos] = useState([
     {
       titulo: "Programación",
       colorPrimario: "#57C278",
@@ -63,7 +59,11 @@ function App() {
       colorPrimario: "#FF8A29",
       colorSecundario: "#FFEEDF"
     }
-  ]
+  ])
+
+  const cambiarMostrar = () => {
+    actualizarMostrar(!mostrarFormulario)
+  }
 
   const registrarColaborador = (colaborador) => {
     console.log("Nuevo colaborador", colaborador)
@@ -76,6 +76,15 @@ function App() {
 
   const actualizarColorEquipo = (color, titulo) => {
     console.log("Actualizar: ", color, titulo)
+    const equiposActualizados = equipos.map((equipo) => {
+      if (equipo.titulo === titulo) {
+        equipo.colorPrimario = color
+      }
+
+      return equipo
+    })
+
+    actualizarEquipos(equiposActualizados)
   }
 
   return (
