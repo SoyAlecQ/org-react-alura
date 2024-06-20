@@ -42,6 +42,10 @@
     margin: 0;
 }
 
+.colaborador .info .fav {
+    margin-top: 10px;
+}
+
 .eliminar {
     position: absolute;
     right: -15px;

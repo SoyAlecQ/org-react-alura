@@ -15,7 +15,7 @@ const Colaborador = (props) => {
       <div className="info">
         <h4>{nombre}</h4>
         <h5>{puesto}</h5>
-        {fav ? <GoHeartFill color="#FF0000" onClick={() => like(id)} /> : <GoHeart onClick={() => like(id)} />}
+        {fav ? <GoHeartFill className="fav" color="#FF0000" onClick={() => like(id)} /> : <GoHeart className="fav" onClick={() => like(id)} />}
       </div>
     </div>
   )
