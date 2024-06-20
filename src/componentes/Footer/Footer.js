@@ -4,18 +4,18 @@ const Footer = () => {
     return (
         <footer className="footer" style={{ backgroundImage: "url(/img/footer.png)" }}>
             <div className="redes">
-                <a href="http://www.facebook.com/">
-                    <img src="/img/facebook.png" alt="Facebook" />
+                <a href="https://github.com/SoyAlecQ" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/github.png" alt="Github" />
                 </a>
-                <a href="https://twitter.com/">
+                <a href="https://x.com/SoyAlecQ" target="_blank" rel="noopener noreferrer">
                     <img src="/img/twitter.png" alt="Twitter" />
                 </a>
-                <a href="https://www.instagram.com/">
-                    <img src="/img/instagram.png" alt="Instagram" />
+                <a href="https://www.linkedin.com/in/byronmontenegro" target="_blank" rel="noopener noreferrer">
+                    <img src="/img/linkedin.png" alt="Linkedin" />
                 </a>
             </div>
             <img src="/img/logo.png" alt="Org" />
-            <strong>Desarrollador por Byron</strong>
+            <strong>Desarrollado con &#10084;&#65039; por Byron</strong>
         </footer>
     )
 }

@@ -5,7 +5,7 @@ import hexToRgba from 'hex-to-rgba';
 const Equipo = (props) => {
 
   const { colorPrimario, titulo, id } = props.datos
-  const { colaboradores, eliminarColaborador, actualizarColorEquipo } = props
+  const { colaboradores, eliminarColaborador, actualizarColorEquipo, like } = props
 
   const background = {
     backgroundColor: hexToRgba(colorPrimario, 0.6)
@@ -23,7 +23,7 @@ const Equipo = (props) => {
         <h3 style={border}>{titulo}</h3>
         <div className="colaboradores">
           {
-            colaboradores.map((colaborador, index) => <Colaborador datos={colaborador} key={index} colorPrimario={colorPrimario} eliminarColaborador={eliminarColaborador} />)
+            colaboradores.map((colaborador, index) => <Colaborador datos={colaborador} key={index} colorPrimario={colorPrimario} eliminarColaborador={eliminarColaborador} like={like} />)
           }
         </div>
       </section>
